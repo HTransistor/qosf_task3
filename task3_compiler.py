@@ -41,7 +41,7 @@ __author__ = "Daniel Scheiermann"
 __copyright__ = ""
 __credits__ = [""]
 __license__ = "GPL"
-__version__ = "0.0.1"
+__version__ = "0.0.2"
 __maintainer__ = "Daniel Scheiermann"
 __email__ = "daniel.scheiermann@stud.uni-hannover.de"
 __status__ = "Production"
@@ -646,6 +646,7 @@ def my_transpile_optimized(old_circuit):
             x_list = [[] for i in old_circuit._qubits]
             y_list = [[] for i in old_circuit._qubits]
 
+          # id does not change the unitary, so does not break a sequence
 #         elif inst.name == "i":
 #             # WARNING: No z_list as Z Z will be removed trough step 2
 #             # clear other gates list as its not consecutive anymore
